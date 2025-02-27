@@ -12,6 +12,7 @@ pipeline{
         stage("Test"){
             steps{
                 sh "mvn test"
+                sh "ls > file.txt"
             }
         }
         stage("Artifact"){
