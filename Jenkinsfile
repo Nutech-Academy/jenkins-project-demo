@@ -12,7 +12,7 @@ pipeline{
         stage("Test"){
             steps{
                 sh "mvn test"
-                sh "ls > file.txt"
+                sh "sleep 90"
             }
         }
         stage("Artifact"){
