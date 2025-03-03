@@ -1,7 +1,8 @@
 package web.example.SimpleWebApp;
 
 import org.springframework.stereotype.Controller;
-import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PostMapping;
 
 /**
  * Controller
@@ -10,9 +11,14 @@ import org.springframework.web.bind.annotation.RequestMapping;
 @Controller
 public class RController{
 
-  @RequestMapping("/home")
+  @GetMapping("/home")
   public String getHomepage(){
     return "homepage";
+  }
+
+  @PostMapping("/post-something")
+  public String postSomething(){
+    return "post";
   }
   
 }
