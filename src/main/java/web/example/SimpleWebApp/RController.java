@@ -15,10 +15,5 @@ public class RController{
   public String getHomepage(){
     return "homepage";
   }
-
-  @PostMapping("/post-something")
-  public String postSomething(){
-    return "post";
-  }
   
 }
